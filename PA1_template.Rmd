@@ -7,10 +7,19 @@ output:
 
 
 ## Loading and preprocessing the data
+First we load the data via readr. It is stored in a variable called 'activity'.
+```{r, cache=TRUE}
+library(readr)
+activity <- read_csv("activity.csv")
+```
+ Let's have a look at the first 10 lines after reading the dataset.
+ ```{r}
+head(activity)
+```
+/## What is mean total number of steps taken per day?
+```{r}
 
-
-
-## What is mean total number of steps taken per day?
+```
 
 
 
