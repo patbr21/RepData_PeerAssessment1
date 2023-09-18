@@ -4,23 +4,29 @@ output:
   html_document:
     keep_md: true
 ---
-
-
+%https://github.com/patbr21/RepData_PeerAssessment1/upload/master
+##Used librarys is this assignment
+```r{}
+library(readr)
+library(dplyr)
+```
 ## Loading and preprocessing the data
 First we load the data via readr. It is stored in a variable called 'activity'.
+We use the library readr for this task.
 ```{r, cache=TRUE}
-library(readr)
 activity <- read_csv("activity.csv")
 ```
  Let's have a look at the first 10 lines after reading the dataset.
  ```{r}
 head(activity)
 ```
-/## What is mean total number of steps taken per day?
+## What is mean total number of steps taken per day?
+First we calculate the number of steps per day, then the resulting mean. We are using the dplyr package for the calculation.
 ```{r}
-
+activity%>%
+          group_by(date)%>%
+          summarise(steps_day = sum(steps, na.rm = TRUE))
 ```
-
 
 
 ## What is the average daily activity pattern?
