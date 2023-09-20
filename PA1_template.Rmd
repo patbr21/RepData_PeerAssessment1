@@ -3,6 +3,7 @@ title: "Reproducible Research: Peer Assessment 1"
 output: 
   html_document:
     keep_md: true
+author: patrick braeutigam
 ---
 https://github.com/patbr21/RepData_PeerAssessment1/upload/master
 
